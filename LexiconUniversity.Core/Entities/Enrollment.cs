@@ -8,6 +8,14 @@ namespace LexiconUniversity.Core.Entities
 {
     public class Enrollment
     {
-        public int Grade { get; set; }       
+        public int Grade { get; set; }
+
+        //Foreign keys
+        public int StudentId { get; set; }
+        public int CourseId { get; set; }
+
+        //Navigational properties
+        public Student Student { get; set; }
+        public Course Course { get; set; }
     }
 }
