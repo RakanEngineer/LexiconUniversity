@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\LexiconUniversity.Persistance\LexiconUniversity.Persistance.csproj" />
+  </ItemGroup>
+
 </Project>
