@@ -1,3 +1,6 @@
+using LexiconUniversity.Persistance.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace LexiconUniversity.Web
 {
     public class Program
@@ -8,6 +11,10 @@ namespace LexiconUniversity.Web
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<LexiconUniversityContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("LexiconUniversityContext") ?? 
+            throw new InvalidOperationException("Connection string 'LexiconUniversityContext' not found.")));
 
             var app = builder.Build();
 
