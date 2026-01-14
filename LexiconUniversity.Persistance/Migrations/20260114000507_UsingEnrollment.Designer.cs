@@ -3,6 +3,7 @@ using LexiconUniversity.Persistance.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LexiconUniversity.Persistance.Migrations
 {
     [DbContext(typeof(LexiconUniversityContext))]
-    partial class LexiconUniversityContextModelSnapshot : ModelSnapshot
+    [Migration("20260114000507_UsingEnrollment")]
+    partial class UsingEnrollment
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
